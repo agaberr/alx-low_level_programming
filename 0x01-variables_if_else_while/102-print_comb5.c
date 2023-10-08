@@ -12,36 +12,30 @@
 int main(void)
 {
 
-	int num1 = 48, num2 = 48, num3 = 48,  num4 = 48;
+	int combination1 = 0, combination2 = 0;
 
-	while (num1 <= (48 + 9) && num2 <= (48 + 8))
+	while (combination1 <= 99)
 	{
-
-		if (num2 < num4)
+		while (combination2 <= 99)
 		{
-			putchar(num1);
-			putchar(num2);
-			putchar(' ');
-			putchar(num3);
-			putchar(num4);
-			if (num1 == (48 + 9) && num2 == (48 + 8))
-				break;
-			putchar(',');
-			putchar(' ');
+			if (combination1 != combination2)
+			{
+				putchar((combination1 / 10) + 48);
+				putchar((combination1 % 10) + 48);
+				putchar(' ');
+				putchar((combination2 / 10) + 48);
+				putchar((combination2 % 10) + 48);
+				if (combination1 == 98 && combination2 == 99)
+					break;
+				putchar(',');
+				putchar(' ');
+			}
+			combination2++;
 		}
-
-		num4++;
-
-		if (num4 > (48 + 9))
-		{
-			num4 = 48;
-			num3++;
-		}
-		if (num3 == (48 + 9) && num4 == (48 + 9))
-			num2++;
-		if (num2 > (48 + 9))
-			num1++;
+		combination2 = 0;
+		combination1++;
 	}
+
 
 	putchar('\n');
 
