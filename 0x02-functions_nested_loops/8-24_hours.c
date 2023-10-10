@@ -15,7 +15,7 @@ void jack_bauer(void)
 
 	int n1 = 0, n2 = 0, n3 = 0, n4 = 0;
 
-	while (n1 != 2 && n2 != 4 && n3 = 0 && n4 != 0)
+	while (n1 != 2 && n2 != 4 && n3 != 0 && n4 != 0)
 	{
 
 		_putchar(n1 + '0');
