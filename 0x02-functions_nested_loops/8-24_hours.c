@@ -7,7 +7,7 @@
  * from 00:00 to 23:59
  *
  *
- * Return: the last digit of a number
+ * Return: nothing
 */
 
 void jack_bauer(void)
