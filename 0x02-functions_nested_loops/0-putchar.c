@@ -18,7 +18,7 @@ int main(void)
 
 	int i = 0;
 
-	while (i < wordSize-1)
+	while (i < wordSize - 1)
 	{
 		_putchar(word[i]);
 		i++;
