@@ -11,17 +11,20 @@
 int main(void)
 {
 
-	int n1 = 1, n2 = 2;
+	long long n1 = 1, n2 = 2;
 
-	printf("%d, %d, ", n1, n2);
+	printf("%lld, %lld, ", n1, n2);
 
-	int i;
+	int it;
 
-	for (i = 0; i < 48; i++)
+	for (it = 0; it < 48; it++)
 	{
-		int sum = n1 + n2;
+		long long sum = n1 + n2;
 
-		printf("%d, ", sum);
+		if (it == 47)
+			printf("%lld", sum);
+		else
+			printf("%lld, ", sum);
 		n1 = n2;
 		n2 = sum;
 
