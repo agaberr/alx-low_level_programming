@@ -1,7 +1,10 @@
 #include "main.h"
 
 /**
- * print nubmer - print numbers using _putchar
+ * print_number - Entry point
+ *
+ * Description: print numbers using _putchar
+ * @n: number to be printed
  *
  * Return: None
 */
@@ -19,5 +22,4 @@ void print_number(int n)
 		print_number(n / 10);
 
 	_putchar((n % 10) + '0');
-
 }
