@@ -6,7 +6,7 @@
  * Return: Always 0 (success)
 */
 
-int main(void)
+void main(void)
 {
 
 	int i;
@@ -31,6 +31,5 @@ int main(void)
 		}
 	}
 	printf("\n");
-	return (0);
 
 }
