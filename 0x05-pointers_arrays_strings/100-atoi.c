@@ -11,11 +11,11 @@
 int _atoi(char *s)
 {
 
-	int negFlag = 0, val = 0;
+	int negFlag = 1, val = 0;
 
 	do {
 		if (*s == '-')
-			negFlag = 1;
+			negFlag *= 1;
 		else if (*s >= 48 && *s <= (48 + 9))
 		{
 			val = (*s - 48) + (val * 10);
@@ -27,10 +27,7 @@ int _atoi(char *s)
 
 	} while (*s++);
 
-	if (negFlag == 1)
-		return (val * -1);
-	else
-		return (val);
+	return (val * negFlag);
 
 
 }
