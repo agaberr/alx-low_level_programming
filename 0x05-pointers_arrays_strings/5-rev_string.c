@@ -9,25 +9,17 @@
 void rev_string(char *s)
 {
 
-	int i = 0, j = 0;
+	int i = 0, j = 0, temp;
+	int n = strlen(s);
+	int nMin = n - 1;
 
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	i--;
-
-	char *rev = s;
-
-	while (i >= 0)
+	for (i = 0; i < n / 2; i++)
 	{
 
-		rev[j] = s[i];
-		i--;
-		j++;
+		temp = s[i];
+		s[i] = s[nMin - i];
+		s[nMin - i] = temp;
 
 	}
-
-	s = rev;
 
 }
