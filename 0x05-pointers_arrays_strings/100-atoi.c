@@ -11,33 +11,27 @@
 int _atoi(char *s)
 {
 
-	int i = 0, negFlag = 0, val = 0;
+	int negFlag = 0, val = 0;
 	int len = strlen(s);
 
-	/* check if  empty */
-	if (len == 0)
-		return (0);
+	do {
+		if (*s == '-')
+			negFlag = 1;
+		else if (*s >= 48 && *s <= (48 + 9))
+		{
+			val = (*s - 48) + (val * 10);
+		}
+		else if (val > 0)
+			break;
 
-	/* check for negetive */
-	if (s[0] == '-')
-	{
-		negFlag = 1;
-		len--;
-	}
 
-	for (i = 0; i < len; i++)
-	{
 
-		if (negFlag == 1)
-			i++;
-
-		val += (s[i] - 48) * (10 * (len));
-
-	}
+	} while (*s++)
 
 	if (negFlag == 1)
-		return (-1 * val);
+		return (val * -1);
 	else
 		return (val);
+
 
 }
