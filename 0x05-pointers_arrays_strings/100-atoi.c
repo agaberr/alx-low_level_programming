@@ -15,7 +15,7 @@ int _atoi(char *s)
 
 	do {
 		if (*s == '-')
-			negFlag *= 1;
+			negFlag *= -1;
 		else if (*s >= 48 && *s <= (48 + 9))
 		{
 			val = (*s - 48) + (val * 10);
