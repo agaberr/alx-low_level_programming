@@ -26,7 +26,7 @@ int _atoi(char *s)
 
 
 
-	} while (*s++)
+	} while (*s++);
 
 	if (negFlag == 1)
 		return (val * -1);
