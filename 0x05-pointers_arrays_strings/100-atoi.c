@@ -28,7 +28,7 @@ int _atoi(char *s)
 	for (i = 0; i < len; i++)
 	{
 
-		if (nrgFlag == 1)
+		if (negFlag == 1)
 			i++;
 
 		val += s[i] * (10 * (len - 1))
