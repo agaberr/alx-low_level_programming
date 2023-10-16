@@ -31,11 +31,13 @@ int _atoi(char *s)
 		if (negFlag == 1)
 			i++;
 
-		val += s[i] * (10 * (len - 1));
+		val += (s[i] - 48) * (10 * (len - 1));
 
 	}
 
-	return (val);
-
+	if (negFlag == 0)
+		return (-1 * val);
+	else
+		return (val);
 
 }
