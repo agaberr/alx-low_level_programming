@@ -12,7 +12,6 @@ int _atoi(char *s)
 {
 
 	int negFlag = 0, val = 0;
-	int len = strlen(s);
 
 	do {
 		if (*s == '-')
