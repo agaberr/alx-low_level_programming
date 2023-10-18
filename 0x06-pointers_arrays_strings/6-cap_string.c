@@ -20,8 +20,8 @@ char *cap_string(char *str)
 
 		if (i == 0)
 		{
-			if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
-			str[i + 1] = toupper(str[i + 1]);
+			if (str[0] >= 'a' && str[0] <= 'z')
+			str[0] = toupper(str[0]);
 		}
 
 		if (str[i + 1] != '\0' && (str[i] == ' ' || str[i] == '\t' ||
