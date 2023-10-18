@@ -19,7 +19,7 @@ char *cap_string(char *str)
 		if (str[i + 1] != '\0' && (str[i] == ' ' || str[i] == '\t' ||
 		str[i] == '\n' || str[i] == ',' || str[i] == ';' ||
 		str[i] == '.' || str[i] == '!' || str[i] == '?' ||
-		str[i] == '.' || str[i] == '!' || str[i] == '"' ||
+		str[i] == '.' || str[i] == '!' || str[i] == '\"' ||
 		str[i] == '(' || str[i] == ')' || str[i] == '{' ||
 		str[i] == '}'))
 
