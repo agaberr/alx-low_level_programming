@@ -23,9 +23,8 @@ char *cap_string(char *str)
 		str[i] == '(' || str[i] == ')' || str[i] == '{' ||
 		str[i] == '}'))
 
-		{
-			str[i + 1] = toupper(str[i + 1]);
-		}
+			if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
+				str[i + 1] = toupper(str[i + 1]);
 
 	}
 
