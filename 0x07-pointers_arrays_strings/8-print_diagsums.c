@@ -12,38 +12,17 @@
 void print_diagsums(int *a, int size)
 {
 
-    
-// (0    1    5) (10   11   12) (1000  101  102)
+	int diagonal = 0, inv_diagonal = 0;
+	int i;
 
-// i = 0, i = 4, i = 8
+	for (i = 0; i < size; i++)
+	{
 
-// i = i + size*(i)
+		diagonal += a[i + (size * i)];
+		inv_diagonal += a[(size - 1) + (size - 1) * i];
 
+	}
 
-// (size - 1) + (size - 1)
+	printf("%d, %d\n", diagonal, inv_diagonal);
 
-// flag at counter  == size
-
-    int diagonal = 0, inv_diagonal = 0;
-    int i;
-
-    for(i = 0; a[i]; i += (size * i))
-    {
-        
-        diagonal += a[i];
-
-    }
-
-    printf("%d\n", diagonal);
-
-}
-
-int main (void)
-{
-
-    int c3[3][3] = {{0,1,5},{10,11,12},{1000,101,102}}; // 113, 1016
-
-    print_diagsums((int *)c3, 3);
-
-    return 0;
 }
