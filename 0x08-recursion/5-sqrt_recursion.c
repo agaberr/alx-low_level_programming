@@ -1,34 +1,39 @@
 #include "main.h"
 
 /**
-* sqrt_recursion - raise x to the power of y
+* sqrt_recursion - check if number has sqrt or not
 * @n: number
+* @currnum: number to compare with
 *
 * Return: the sqrt of a number, -1 if -ve
 */
 
+int return_sqrt(int n, int currnum);
+
 int sqrt_recursion(int n)
 {
-
-    if ()
-    {
-
-    }
-    else
-    {
-
-    }
-
+	if (n < 0)
+		return (return_sqrt(n, 1));
+	else
+		return (-1);
 }
 
-int main(void)
+/**
+* return_sqrt - check if number has sqrt or not
+* @n: number
+* @currnum: number to compare with
+*
+* Return: the sqrt of a number, -1 otherwise
+*/
+
+int return_sqrt(int n, int currnum)
 {
 
-    printf("%d\n", sqrt_recursion(4));
-    printf("%d\n", sqrt_recursion(5));
-    printf("%d\n", sqrt_recursion(7));
-    printf("%d\n", sqrt_recursion(64));
+	if (currnum * currnum == n)
+		return (1);
+	else if (currnum * currnum > n)
+		return (-1);
+	else
+		return (return_sqrt(n, currnum + 1));
 
-
-    return 0;
 }
