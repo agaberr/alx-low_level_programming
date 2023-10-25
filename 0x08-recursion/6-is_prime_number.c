@@ -3,6 +3,7 @@
 /**
 * is_prime_number - is prime number
 * @n: number
+* @number: index to compare if equal
 *
 * Return: 1 if prime number, 0 otherwise
 */
