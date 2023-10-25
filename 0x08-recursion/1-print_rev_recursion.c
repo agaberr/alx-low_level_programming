@@ -11,7 +11,7 @@ void print_no_newline(char *s);
 void _print_rev_recursion(char *s)
 {
 
-	print_no_newline(s);
+	print_no_newline(*s);
 	_putchar('\n');
 
 }
@@ -32,7 +32,7 @@ void print_no_newline(char *s)
 	}
 	else
 	{
-		_print_rev_recursion(++s);
+		print_no_newline(++s);
 		_putchar(*s);
 	}
 
