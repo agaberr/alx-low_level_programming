@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * free_grid - returns a pointer to a newly allocated space in memory
- * @grid: str to copy
- * @height: str to copy
+ * free_grid - free memory
+ * @grid: grid to free
+ * @height: height of grid
  *
- * Return: NULL if str = NULL & pointer to the array, or NULL if it fails
+ * Return: None
 */
 
 void free_grid(int **grid, int height)
