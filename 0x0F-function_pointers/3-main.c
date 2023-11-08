@@ -3,16 +3,21 @@
 #include "3-calc.h"
 
 /**
- * main - Entry point
- * @argc: number of args
- * @argv: array contain args
- *
- * Return: Always 0 (success)
+* main - Entry point
+* @argc: number of args
+* @argv: array contain args
+*
+* Return: Always 0 (success)
 */
+
+int (*get_op_func(char *s))(int, int);
 
 int main(int argc, char *argv[])
 {
+
 	int a, b, result;
+
+	char *operator;
 
 	int (*op_func)(int, int);
 
@@ -23,10 +28,14 @@ int main(int argc, char *argv[])
 	}
 
 	a = atoi(argv[1]);
+
+	operator = argv[2];
+
 	b = atoi(argv[3]);
 
-	op_func = get_op_func(argv[2]);
+	op_func = get_op_func(operator);
 	result = op_func(a, b);
+
 	printf("%d\n", result);
 
 	return (0);
