@@ -12,14 +12,12 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-
 	void (*ptr)(char (*));
 
-	ptr = f;
-
-	if (!ptr || !name)
-		return (NULL);
-
-	ptr(name);
+	if (ptr != NULL && name != NULL)
+	{
+		ptr = f;
+		ptr(name);
+	}
 
 }
