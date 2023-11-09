@@ -3,6 +3,7 @@
 /**
 * print_all - print all params
 * @format: format of print
+* @...: strings to print
 *
 * Return: None
 */
