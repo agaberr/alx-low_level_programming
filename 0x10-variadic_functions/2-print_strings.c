@@ -4,6 +4,7 @@
 * print_strings -  prints strings, followed by a new line
 * @separator: string to be printed between strings
 * @n: number of params
+* @...: string to print
 *
 * Return: None
 */
@@ -16,7 +17,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_list ptr;
 
 	if (n == 0)
+	{
+		printf("\n");
 		return;
+	}
 
 	va_start(ptr, n);
 
