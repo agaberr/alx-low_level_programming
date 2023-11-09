@@ -32,7 +32,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (str)
 			printf("%s", str);
 		else
-			printf("(nill)");
+			printf("(nil)");
 
 		if (separator != NULL)
 		printf("%s", separator);
