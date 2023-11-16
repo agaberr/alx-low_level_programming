@@ -4,8 +4,6 @@
 *
 * Return: None
 */
-
-
 void print_before_main(void) __attribute__((constructor));
 
 void print_before_main(void)
