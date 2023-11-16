@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
-* print_list - singly linked list
-* @h: string - (malloc'ed string)
+* print_list - print linked list
+* @h: Node
 *
 * Return: the number of nodes
 */
