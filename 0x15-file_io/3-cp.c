@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 		close(fd_from);
 		exit(99);
 	}
-	while (r_bytes = read(fd_from, buffer, 1024))
+	while ((r_bytes = read(fd_from, buffer, 1024)) > 0)
 	{w_bytes = write(fd_to, buffer, r_bytes);
 		if (w_bytes != r_bytes)
 		{
