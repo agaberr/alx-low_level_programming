@@ -41,7 +41,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	w_bytes = fwrite(buffer, 1, letters, stdout);
 
-	if (w_bytes < 0)
+	if (w_bytes < bytes)
 	{
 		free(buffer);
 		fclose(file);
