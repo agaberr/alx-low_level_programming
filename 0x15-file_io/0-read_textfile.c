@@ -10,11 +10,12 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+	ssize_t w_bytes, bytes;
+	FILE *file;
 
 	if (filename == NULL)
 		return (0);
-
-	FILE *file = fopen(filename, "r");
+	file = fopen(filename, "r");
 
 	if (file == NULL)
 		return (0);
@@ -27,7 +28,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	ssize_t bytes = fread(buffer, 1, letters, file);
+	bytes = fread(buffer, 1, letters, file);
 
 	if (bytes < 0)
 	{
@@ -38,7 +39,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	buffer[bytes] = '\0';
 
-	ssize_t w_bytes = fwrite(buffer, 1, letters, stdout);
+	w_bytes = fwrite(buffer, 1, letters, stdout);
 
 	if (w_bytes < 0)
 	{
